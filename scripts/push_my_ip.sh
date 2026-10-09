@@ -81,8 +81,7 @@ $(get_my_ips)
 EOL
 # End of file output
 log "committing to git repo"
-git add ../README.md
-git commit -am "auto IP commit $timestamp" 
-git push origin master                     
+git commit -am "auto IP commit $timestamp" >/dev/null 2>&1 # commit the change in git
+git push origin master                     >/dev/null 2>&1 # push to GitLab
 log "done"
 popd >/dev/null 2>&1                                       # return to original folder
