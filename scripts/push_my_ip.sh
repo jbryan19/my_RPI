@@ -80,6 +80,7 @@ As of $timestamp, my Raspberry-Pi has the following IP:
 $(get_my_ips)
 EOL
 # End of file output
+git add ../README.md
 log "committing to git repo"
 git commit -am "auto IP commit $timestamp" >/dev/null 2>&1 # commit the change in git
 git push origin master                     >/dev/null 2>&1 # push to GitLab
